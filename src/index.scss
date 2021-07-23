@@ -25,6 +25,12 @@ header {
   p {
     margin: 0;
   }
+
+  svg {
+    path {
+      fill:yellow;
+    }
+  }
 }
 
 .content {
