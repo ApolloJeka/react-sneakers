@@ -2,6 +2,47 @@
 function App() {
   return  (
     <div className="wrapper clear">
+      <div className="overlay">
+        <div className="drawer">
+          <h2 className="d-flex justify-between mb-30 cu-p">Кошик <img className="removeBtn" src="/img/btn-remove.svg" alt="Remove "/></h2>
+         <div className="items">
+         <div className="cartItem d-flex align-center mb-20">
+            <div style={{ backgroundImage : 'url(/img/sneakers/Nike_Air_Max_270.jpg)'}} className="cartItemImg"></div>
+            <div className="mr-20 flex">
+              <p className="mb-5"> Чоловічі кросівки Nike Air Max 270</p>
+              <b>4 999 грн.</b>
+            </div>
+            <img className="removeBtn" src="/img/btn-remove.svg" alt="Remove "/>
+          </div>
+          <div className="cartItem d-flex align-center">
+            <div style={{ backgroundImage : 'url(/img/sneakers/Nike_Air_Max_270.jpg)'}} className="cartItemImg"></div>
+            <div className="mr-20 flex">
+              <p className="mb-5"> Чоловічі кросівки Nike Air Max 270</p>
+              <b>4 999 грн.</b>
+            </div>
+            <img className="removeBtn" src="/img/btn-remove.svg" alt="Remove "/>
+          </div>
+         </div>
+        <div className="cartTotalBlock">
+        <ul className="cartTotalBlock">
+          <li>
+            <span>Разом: </span>
+            <div></div>
+            <b>7 998 грн. </b>
+          </li>
+          <li>
+            <span>Налог 5%: </span>
+            <div></div>
+            <b>399,9 грн. </b>
+          </li>
+          </ul>     
+          <button className="greenButton">
+            Оформити замовлення
+          <img src="/img/arrow.svg" alt="Arrow" /> 
+          </button> 
+        </div>
+        </div>
+      </div>
       <header className="d-flex justify-between align-center p-40">
         <div className="d-flex align-center">
           <img width={18} height={18} src="/img/logo.png" alt="" />
@@ -13,12 +54,6 @@ function App() {
         <ul className="d-flex">
           <li className="mr-30">
           <img width={18} height={18} src="/img/cart.svg" alt="" />
-          {/* <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7.54548 18.1818C7.99735 18.1818 8.36366 17.8155 8.36366 17.3636C8.36366 16.9118 7.99735 16.5455 7.54548 16.5455C7.09361 16.5455 6.72729 16.9118 6.72729 17.3636C6.72729 17.8155 7.09361 18.1818 7.54548 18.1818Z" stroke="#9B9B9B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16.5455 18.1818C16.9973 18.1818 17.3637 17.8155 17.3637 17.3636C17.3637 16.9118 16.9973 16.5455 16.5455 16.5455C16.0936 16.5455 15.7273 16.9118 15.7273 17.3636C15.7273 17.8155 16.0936 18.1818 16.5455 18.1818Z" stroke="#9B9B9B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M1 1H4.27273L6.46545 11.9555C6.54027 12.3321 6.7452 12.6705 7.04436 12.9113C7.34351 13.1522 7.71784 13.2801 8.10182 13.2727H16.0545C16.4385 13.2801 16.8129 13.1522 17.112 12.9113C17.4112 12.6705 17.6161 12.3321 17.6909 11.9555L19 5.09091H5.09091" stroke="#9B9B9B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg> */}
-
             <span>440 грн</span>
           </li>
           <li>
@@ -27,11 +62,20 @@ function App() {
         </ul>
       </header>
       <div className="content p-40">
-        <h1 className="mb-40">Всі кросівки</h1>
+       <div className="d-flex align-center justify-between mb-40">
+        <h1>Всі кросівки</h1>
+        <div className="search-block d-flex">
+          <img src="/img/search.svg" alt="Search"></img>
+          <input placeholder="Пошук..." />
+        </div>
+       </div>
       <div className="d-flex">
       <div className="card">
+          <div className="favorite">
+          <img src="/img/heart-unliked.svg" alt="Unliked" />
+          </div>
           <img width={133} height={112} src="/img/sneakers/Nike_Blazer_Mid_Suede_Green.jpg" alt="Sneakers" />
-          <h5>Чоловічі кросівки Nike Blazer Mid Suede</h5>
+          <h5>Чоловічі кросівки Nike Blazer Mid Suede Green</h5>
           <div className="d-flex justify-between align-center">
             <div className="d-flex flex-column ">
             <span>Ціна:</span>
@@ -44,7 +88,7 @@ function App() {
       </div>
       <div className="card">
           <img width={133} height={112} src="/img/sneakers/Nike_Air_Max_270.jpg" alt="Sneakers" />
-          <h5>Чоловічі кросівки Nike Blazer Mid Suede</h5>
+          <h5>Чоловічі кросівки Nike Air Max 270</h5>
           <div className="d-flex justify-between align-center">
             <div className="d-flex flex-column ">
             <span>Ціна:</span>
@@ -57,7 +101,7 @@ function App() {
       </div>
       <div className="card">
           <img width={133} height={112} src="/img/sneakers/Nike_Blazer_Mid _Suede_White.jpg" alt="Sneakers" />
-          <h5>Чоловічі кросівки Nike Blazer Mid Suede</h5>
+          <h5>Чоловічі кросівки Nike Blazer Mid Suede White</h5>
           <div className="d-flex justify-between align-center">
             <div className="d-flex flex-column ">
             <span>Ціна:</span>
@@ -70,7 +114,7 @@ function App() {
       </div>
       <div className="card">
           <img width={133} height={112} src="/img/sneakers/Puma_X_Aka_Boku_Future_Rider.jpg" alt="Sneakers" />
-          <h5>Чоловічі кросівки Nike Blazer Mid Suede</h5>
+          <h5>Чоловічі кросівки Puma X Aka Boku Future Rider</h5>
           <div className="d-flex justify-between align-center">
             <div className="d-flex flex-column ">
             <span>Ціна:</span>
