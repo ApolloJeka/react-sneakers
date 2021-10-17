@@ -124,6 +124,8 @@ cursor: pointer;
 
 .items {
   flex: 1;
+  overflow: auto;
+  margin-bottom: 40px;
 }
 
 .cartTotalBlock {
