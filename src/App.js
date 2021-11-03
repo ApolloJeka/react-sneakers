@@ -2,6 +2,28 @@ import Card from './components/Card';
 import Header from './components/Header';
 import Drawer from './components/Drawer';
 
+const arr = [
+  {
+    name: 'Чоловічі кросівки Nike Blazer Mid Suede Green',
+    price: 4999,
+    imageUrl: '/img/sneakers/Nike_Blazer_Mid_Suede_Green.jpg', 
+  },
+  {
+    name: 'Чоловічі кросівки Nike Blazer Mid Suede White',
+    price: 4999,
+    imageUrl: '/img/sneakers/Nike_Blazer_Mid _Suede_White.jpg', 
+  },
+  {
+    name: 'Кросівки Puma X Aka Boku Future Rider',
+    price: 4999,
+    imageUrl: '/img/sneakers/Puma_X_Aka_Boku_Future_Rider.jpg', 
+  },
+  {
+    name: 'Чоловічі кросівки Nike Air Max 270',
+    price: 4999,
+    imageUrl: '/img/sneakers/Nike_Blazer_Mid _Suede_White.jpg', 
+  },
+]
 
 function App() {
   return  (
@@ -19,46 +41,13 @@ function App() {
         </div>
        </div>
       <div className="d-flex">
-      < Card />
-      <div className="card">
-          <img width={133} height={112} src="/img/sneakers/Nike_Air_Max_270.jpg" alt="Sneakers" />
-          <h5>Чоловічі кросівки Nike Air Max 270</h5>
-          <div className="d-flex justify-between align-center">
-            <div className="d-flex flex-column ">
-            <span>Ціна:</span>
-            <b>4 999 грн.</b>
-          </div>
-          <button className="button">
-            <img width={11} height={11} src="/img/plus.svg" alt="Plus"/>
-          </button>
-        </div>
-      </div>
-      <div className="card">
-          <img width={133} height={112} src="/img/sneakers/Nike_Blazer_Mid _Suede_White.jpg" alt="Sneakers" />
-          <h5>Чоловічі кросівки Nike Blazer Mid Suede White</h5>
-          <div className="d-flex justify-between align-center">
-            <div className="d-flex flex-column ">
-            <span>Ціна:</span>
-            <b>4 999 грн.</b>
-          </div>
-          <button className="button">
-            <img width={11} height={11} src="/img/plus.svg" alt="Plus"/>
-          </button>
-        </div>
-      </div>
-      <div className="card">
-          <img width={133} height={112} src="/img/sneakers/Puma_X_Aka_Boku_Future_Rider.jpg" alt="Sneakers" />
-          <h5>Чоловічі кросівки Puma X Aka Boku Future Rider</h5>
-          <div className="d-flex justify-between align-center">
-            <div className="d-flex flex-column ">
-            <span>Ціна:</span>
-            <b>4 999 грн.</b>
-          </div>
-          <button className="button">
-            <img width={11} height={11} src="/img/plus.svg" alt="Plus"/>
-          </button>
-        </div>
-      </div>
+        {arr.map((obj) => (
+          <Card
+            title={obj.name}
+            price={obj.price}
+            imageUrl={obj.imageUrl}
+          />
+        ))}
       </div>
     </div>
     </div>
